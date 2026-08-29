@@ -1,0 +1,107 @@
+# ============================================================
+# Site configuration — edit the marked lines, leave the rest.
+# ============================================================
+
+baseURL: "https://shirepydev.github.io/"
+locale: "en-us"
+title: "Yusuf — AI Security Notes"        # EDIT: pick your blog name
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+pagination:
+  pagerSize: 8
+
+minify:
+  disableXML: true
+
+outputs:
+  home: [HTML, RSS, JSON]   # JSON output powers the built-in search page
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    codeFences: true
+    noClasses: false        # use PaperMod's bundled Chroma styles (light + dark)
+    lineNos: false
+    guessSyntax: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+params:
+  env: production
+  description: "Notes on AI security — prompt injection, LLM defenses, and securing vision-language systems. Written while learning it."   # EDIT if you want
+  author: "Yusuf"
+  keywords: [AI security, prompt injection, LLM security, VLM security]
+
+  defaultTheme: auto        # light/dark follows the reader's system
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  ShowWordCount: false
+  hideSummary: false
+  disableSpecial1stPost: true
+
+  # Home page: profile card, not a bare post list
+  profileMode:
+    enabled: true
+    title: "Yusuf"                                     # EDIT: your display name
+    subtitle: "AI security researcher in training. I write about prompt injection, LLM defenses, and what I learn building and breaking things — in plain language."   # EDIT: your one-line positioning
+    buttons:
+      - name: Posts
+        url: /posts/
+      - name: About
+        url: /about/
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/ShirePyDev"
+    # - name: linkedin                    # EDIT: uncomment and add your URL
+    #   url: "https://www.linkedin.com/in/YOUR-HANDLE/"
+    # - name: googlescholar               # EDIT: add when you have a profile
+    #   url: ""
+    - name: rss
+      url: "/index.xml"
+
+  fuseOpts:                 # search behavior (defaults are fine)
+    isCaseSensitive: false
+    shouldSort: true
+    minMatchCharLength: 2
+    keys: [title, summary, content]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 50

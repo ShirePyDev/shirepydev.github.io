@@ -1,0 +1,13 @@
+/* Readability tweaks on top of PaperMod — keep this file small. */
+
+/* Slightly wider measure for technical posts with code blocks */
+.post-content { line-height: 1.75; }
+
+/* Tables: PaperMod default is cramped for benchmark-style tables */
+.post-content table { display: block; overflow-x: auto; white-space: nowrap; }
+.post-content th, .post-content td { padding: 6px 12px; }
+
+/* Inline code: a touch more contrast */
+.post-content code { padding: 2px 5px; border-radius: 4px; }
+
+/* De-emphasize the draft checklist comments if ever rendered */
