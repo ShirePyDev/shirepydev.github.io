@@ -28,8 +28,6 @@ And when I started, most AI security material was either a research paper (dense
 
 Explanations of attacks and defenses, notes on papers worth reading, write-ups of my own research, and build logs from my projects, including the parts that went wrong. Research posts end with the experiment I would run next, because that is usually the most useful thing in them.
 
-English is not my first language, and this is my first blog. If something is unclear or wrong, tell me: [open an issue](https://github.com/ShirePyDev/shirepydev.github.io/issues) or email me at [khalidshire@kookmin.ac.kr](mailto:khalidshire@kookmin.ac.kr).
-
 ## Publications
 
 - Yusuf Khalid Shire and Sang-Chul Kim. **PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift.** *IEEE Access*, vol. 14, 2026. [DOI](https://doi.org/10.1109/ACCESS.2026.3728186) · [arXiv](https://arxiv.org/abs/2609.15017) · [benchmark and code](https://github.com/ShirePyDev/Prompt-Injection-Detection-System)
