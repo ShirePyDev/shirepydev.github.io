@@ -36,4 +36,4 @@ English is not my first language, and this is my first blog. If something is unc
 
 ## Elsewhere
 
-[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/YOUR-HANDLE/) <!-- EDIT: LinkedIn URL -->
+[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/yusuf-khalid-336207235/) <!-- EDIT: LinkedIn URL -->
