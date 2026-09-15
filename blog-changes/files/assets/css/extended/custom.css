@@ -1,0 +1,27 @@
+/* Readability tweaks on top of PaperMod. Keep this file small: if it passes ~30 lines,
+   ask what problem each rule solves. */
+
+/* One accent color, used for links only. Muted so it reads on light and dark. */
+:root { --accent: #1f6f8b; }
+:root[data-theme="dark"] { --accent: #6fb3c9; }
+.post-content a:not(.anchor) { color: var(--accent); text-decoration-thickness: 1px; }
+.post-content a:not(.anchor):hover { text-decoration-thickness: 2px; }
+
+/* Body text: a little more air for long technical posts */
+.post-content { line-height: 1.75; }
+
+/* Figure captions: small, muted, centered. The caption says what to see in the figure. */
+.post-content figure > figcaption { font-weight: normal; font-size: 15px; color: var(--secondary); text-align: center; }
+.post-content figure > figcaption > p { font-size: 15px; }
+
+/* Callout: a blockquote is the only callout style on this site. Use for "note" and
+   "if you only read one thing". Not for quoting people (plain italics do that). */
+.post-content blockquote { border-inline-start: 0.25rem solid var(--accent); background: var(--code-bg); padding: 0.75rem 1rem; border-radius: var(--radius); }
+.post-content blockquote p:last-child { margin-bottom: 0; }
+
+/* Tables: PaperMod default is cramped for benchmark-style tables */
+.post-content table { display: block; overflow-x: auto; white-space: nowrap; }
+.post-content th, .post-content td { padding: 6px 12px; }
+
+/* Inline code: a touch more contrast */
+.post-content code { padding: 2px 5px; border-radius: 4px; }
