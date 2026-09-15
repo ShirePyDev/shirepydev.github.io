@@ -4,19 +4,36 @@ url: "/about/"
 summary: "Who writes this blog and why"
 ShowToc: false
 ShowReadingTime: false
+ShowBreadCrumbs: false
 ---
 
-<!-- DRAFT written for you as a starting point. Rewrite it in your own words
-     before publishing — readers can tell. Check every fact is one you want public. -->
+<!-- EDIT: put your photo at static/images/yusuf.jpg (a real photo, roughly square, 600-800 px),
+     then delete the comment markers around the next line. A real face is one of the strongest
+     "a person maintains this" signals a site can send. -->
+<!-- ![Yusuf Khalid Shire](/images/yusuf.jpg#center) -->
 
-I'm Yusuf, a Master's student researching AI security at Kookmin University (MCLab) in Seoul. My work focuses on prompt injection: how attackers smuggle instructions into LLM inputs, how detectors fail, and how to measure that failure honestly. My first paper, a benchmark for prompt-injection detectors, was accepted at IEEE Access in 2026. I also work on the security of vision-language models that control physical systems like drones.
+I'm Yusuf Khalid Shire, a Master's student in the Department of AI Convergence at Kookmin University in Seoul, where I work in MCLab with Professor Sang-Chul Kim. I started there in September 2025.
 
-This blog exists for two reasons.
+My work sits where AI security, AI safety, and AI policy meet. The question I keep coming back to is how the defenses we put in front of language models fail, and how to measure that failure honestly instead of reporting one flattering number. My first paper is a benchmark for prompt-injection detectors that measures what they do to legitimate security-related text, not only whether they catch attacks. The part I am increasingly drawn to is what such results should mean beyond the lab: how evaluation evidence like this should shape safety requirements, deployment standards, and the policy written for AI systems. Future papers and projects here will follow that line.
 
-First, I'm learning this field, and writing is how I check whether I actually understand something. If I can't explain an attack in plain language, I don't understand it yet.
+## Why this blog exists
 
-Second, when I started, most AI security material was either research papers (dense, assumes background) or hype threads (loud, often wrong). I wanted something in between: short, sourced, reproducible explanations. That's the gap I'm writing into.
+Two reasons.
 
-What you'll find here: explanations of attacks and defenses, notes on papers worth reading, and build logs from my own projects — including the mistakes.
+Writing is how I check whether I understand something. If I cannot explain an attack in plain language, with a concrete example and a number I can source, I do not understand it yet.
 
-English is not my first language and this is my first blog. If something is unclear or wrong, tell me: [open an issue on GitHub](https://github.com/ShirePyDev) <!-- EDIT: point this at your blog repo's issues page after you create it -->.
+And when I started, most AI security material was either a research paper (dense, assumes you already know the field) or a social-media thread (loud, often wrong). Short, sourced, reproducible explanations were hard to find. That is the gap I write into.
+
+## What you will find here
+
+Explanations of attacks and defenses, notes on papers worth reading, write-ups of my own research, and build logs from my projects, including the parts that went wrong. Research posts end with the experiment I would run next, because that is usually the most useful thing in them.
+
+English is not my first language, and this is my first blog. If something is unclear or wrong, tell me: [open an issue](https://github.com/ShirePyDev/shirepydev.github.io/issues) or email me at [khalidshire@kookmin.ac.kr](mailto:khalidshire@kookmin.ac.kr).
+
+## Publications
+
+- Yusuf Khalid Shire and Sang-Chul Kim. **PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift.** *IEEE Access*, vol. 14, 2026. [DOI](https://doi.org/10.1109/ACCESS.2026.3728186) · [arXiv](https://arxiv.org/abs/2609.15017) · [benchmark and code](https://github.com/ShirePyDev/Prompt-Injection-Detection-System)
+
+## Elsewhere
+
+[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/YOUR-HANDLE/) <!-- EDIT: LinkedIn URL -->

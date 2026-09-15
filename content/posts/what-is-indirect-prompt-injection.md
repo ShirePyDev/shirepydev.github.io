@@ -2,8 +2,8 @@
 title: "What Is Indirect Prompt Injection (and Why Filters Keep Missing It)"
 date: 2026-08-27
 draft: true
-tags: [prompt-injection, llm-security, basics]
-summary: ""   # write this last, one sentence
+tags: [explainer, prompt-injection, llm-security]
+summary: ""   # ONE sentence that states the claim. Write it last.
 ---
 
 <!--

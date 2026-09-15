@@ -97,7 +97,7 @@ params:
     - name: github
       url: "https://github.com/ShirePyDev"
     - name: linkedin
-      url: "https://www.linkedin.com/in/YOUR-HANDLE/"     # EDIT: your LinkedIn URL
+      url: "https://www.linkedin.com/in/yusuf-khalid-336207235/"     
     - name: email
       url: "mailto:khalidshire@kookmin.ac.kr"              # EDIT if you want a different public address
     # - name: googlescholar        # add once a profile exists
