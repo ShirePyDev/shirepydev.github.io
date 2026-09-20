@@ -1,0 +1,94 @@
+/* Table of contents. Two forms of the same list, see layouts/_partials/toc.html:
+   narrow screens keep PaperMod's collapsible box, wide screens get a sticky rail
+   beside the article. The article column never moves. */
+
+.toc-rail {
+    display: none;
+}
+
+.toc-rail-title {
+    margin: 0 0 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.toc-rail ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toc-rail li ul {
+    padding-inline-start: 12px;   /* h3 sits under its h2 */
+}
+
+.toc-rail a {
+    display: block;
+    padding: 5px 0 5px 12px;
+    border-inline-start: 2px solid var(--border);
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.toc-rail li ul a {
+    font-size: 12.5px;
+}
+
+.toc-rail a:hover {
+    color: var(--primary);
+    border-inline-start-color: var(--secondary);
+}
+
+/* The section being read. --accent is set in custom.css and used for links site-wide. */
+.toc-rail a.is-active {
+    color: var(--accent);
+    border-inline-start-color: var(--accent);
+}
+
+/* Room under a heading when you jump to it. */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    scroll-margin-top: 24px;
+}
+
+/* Wide screens only: the rail replaces the box. Width is whatever is left
+   beside the 720px article column, so the text column never narrows. */
+@media (min-width: 1200px) {
+    .toc-inline {
+        display: none;
+    }
+
+    .toc-rail {
+        display: block;
+        position: fixed;
+        top: 96px;
+        inset-inline-start: calc(50% + 396px);
+        width: clamp(160px, calc(50vw - 412px), 240px);
+    }
+
+    .toc-rail-inner {
+        position: relative;
+        max-height: calc(100vh - 150px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media print {
+    .toc-rail {
+        display: none;
+    }
+}

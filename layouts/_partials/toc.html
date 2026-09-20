@@ -1,0 +1,99 @@
+{{- /* Table of contents, rendered twice from the same headings:
+       - .toc-rail    a sticky rail beside the article on wide screens
+       - .toc-inline  PaperMod's collapsible box, used on narrow screens
+       Levels come from markup.tableOfContents in hugo.yaml (h2 and h3).
+       Styles live in assets/css/extended/toc.css. */ -}}
+
+{{- $toc := printf "%s" .TableOfContents -}}
+{{- $list := replaceRE `(?s)^\s*<nav id="TableOfContents">\s*(.*?)\s*</nav>\s*$` "$1" $toc -}}
+{{- $list = replaceRE `\s*id="TableOfContents"` "" $list -}}
+
+{{- if in $list "<a " -}}
+<aside class="toc-rail" aria-label="{{ i18n "toc" | default "Table of Contents" }}">
+    <div class="toc-rail-inner">
+        <p class="toc-rail-title">{{ i18n "toc" | default "Table of Contents" }}</p>
+        <nav>{{ $list | safeHTML }}</nav>
+    </div>
+</aside>
+
+<details class="toc toc-inline"{{ if (.Param "TocOpen") }} open{{ end }}>
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">{{- i18n "toc" | default "Table of Contents" }}</span>
+    </summary>
+    <div class="inner">{{ $list | safeHTML }}</div>
+</details>
+
+<script>
+    // Marks the section you are currently reading in the rail.
+    (function () {
+        // This partial is rendered above the article, so the headings it points at
+        // do not exist yet. Wait for the rest of the page before looking them up.
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", start);
+        } else {
+            start();
+        }
+
+        function start() {
+        var rail = document.querySelector(".toc-rail");
+        if (!rail) return;
+        var links = Array.prototype.slice.call(rail.querySelectorAll('a[href^="#"]'));
+        var box = rail.querySelector(".toc-rail-inner");
+        if (!links.length) return;
+
+        var targets = links.map(function (a) {
+            try {
+                return document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)));
+            } catch (e) {
+                return null;
+            }
+        });
+        var current = -1;
+
+        function update() {
+            if (!rail.getClientRects().length) return; // rail is hidden at this width
+            var line = window.scrollY + 120;
+            var atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+            var i = 0;
+            for (var j = 0; j < targets.length; j++) {
+                if (targets[j] && targets[j].getBoundingClientRect().top + window.scrollY <= line) i = j;
+            }
+            if (atEnd) i = targets.length - 1;
+            if (i === current) return;
+            if (current > -1) {
+                links[current].classList.remove("is-active");
+                links[current].removeAttribute("aria-current");
+            }
+            links[i].classList.add("is-active");
+            links[i].setAttribute("aria-current", "true");
+            current = i;
+
+            if (box.scrollHeight > box.clientHeight) { // keep the active item in view in a long list
+                var top = links[i].offsetTop;
+                if (top < box.scrollTop || top > box.scrollTop + box.clientHeight - 32) {
+                    box.scrollTop = top - box.clientHeight / 2;
+                }
+            }
+        }
+
+        var last = 0, timer = null;
+        function onScroll() { // at most ~16 checks a second, plus one after scrolling stops
+            var now = Date.now();
+            clearTimeout(timer);
+            if (now - last < 60) {
+                timer = setTimeout(onScroll, 60);
+                return;
+            }
+            last = now;
+            update();
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true });
+        // Images load late and move the headings, so recheck when the page height changes.
+        if (window.ResizeObserver) new ResizeObserver(onScroll).observe(document.body);
+        update();
+        }
+    })();
+</script>
+{{- end -}}
