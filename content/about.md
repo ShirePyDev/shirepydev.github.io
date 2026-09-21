@@ -7,10 +7,7 @@ ShowReadingTime: false
 ShowBreadCrumbs: false
 ---
 
-<!-- EDIT: put your photo at static/images/yusuf.jpg (a real photo, roughly square, 600-800 px),
-     then delete the comment markers around the next line. A real face is one of the strongest
-     "a person maintains this" signals a site can send. -->
-<!-- ![Yusuf Khalid Shire](/images/yusuf.jpg#center) -->
+![Yusuf Khalid Shire](/images/yusuf.jpg#avatar)
 
 I'm Yusuf Khalid Shire, a Master's student in the Department of AI Convergence at Kookmin University in Seoul, where I work in MCLab with Professor Sang-Chul Kim. I started there in September 2025.
 
@@ -34,4 +31,4 @@ Explanations of attacks and defenses, notes on papers worth reading, write-ups o
 
 ## Elsewhere
 
-[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/yusuf-khalid-336207235/) <!-- EDIT: LinkedIn URL -->
+[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/yusuf-khalid-336207235/)

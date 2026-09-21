@@ -1,83 +1,53 @@
-# shirepydev.github.io — AI Security blog
+# Yusuf Khalid Shire · AI Security, Safety & Policy
 
-Hugo + PaperMod, deployed free on GitHub Pages. The theme is vendored in
-`themes/PaperMod` (no git submodules), so the repo is self-contained: clone,
-push, it builds.
+**[shirepydev.github.io](https://shirepydev.github.io/)**
 
-## Go live (one time, ~10 minutes)
+Research notes on how language-model systems are attacked, how their defenses fail, how to measure that failure honestly, and what those measurements should mean for the rules we write for deployed AI.
 
-1. **Create the repo.** On GitHub, create a new **public** repo named exactly
-   `shirepydev.github.io` (repo name = your URL). No README, no license —
-   completely empty.
+This repository is the source of the blog: every post, every figure, and the code behind every result.
 
-2. **Push this folder.** From inside this folder:
+## Why this exists
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial blog setup"
-   git branch -M main
-   git remote add origin https://github.com/ShirePyDev/shirepydev.github.io.git
-   git push -u origin main
-   ```
+When I started working in AI security, most of what I could find was one of two things: research papers that assume you already know the field, or social-media threads that are loud and often wrong. Short, sourced, reproducible explanations were rare. This blog is written into that gap.
 
-3. **Turn on Pages.** On GitHub: repo → Settings → Pages → under "Build and
-   deployment", set **Source: GitHub Actions**. The workflow in
-   `.github/workflows/hugo.yml` runs on every push. First run takes ~1 minute
-   (check the Actions tab). Your site is then live at
-   **https://shirepydev.github.io/**
+It is also how I check my own understanding. If I cannot explain an attack in plain language, with a concrete example and a number I can source, I do not understand it yet.
 
-## Before you publish anything
+## What you will find
 
-Open `hugo.yaml` and edit every line marked `# EDIT`. Then rewrite
-`content/about.md` in your own words — it is a draft, not final copy.
+| Kind | What it is |
+|---|---|
+| **Explainers** | How an attack or defense works, starting from something you can run rather than a definition. |
+| **Research** | Write-ups of my own work, ending with the experiment I would run next. |
+| **Paper notes** | Close readings of papers worth your time. |
+| **Build logs** | Projects as they were built, including the parts that went wrong. |
 
-## Writing workflow (every post)
+The recurring themes are prompt injection (direct and indirect), the security of LLM agents and retrieval systems, how prompt-injection detectors are evaluated, and where that evidence meets AI safety requirements and policy.
 
-```bash
-hugo new content posts/my-post-name.md   # creates from the posts archetype
-# write in content/posts/my-post-name.md
-hugo server -D                            # preview at http://localhost:1313 (drafts visible)
-# when ready: change  draft: true  ->  draft: false
-git add . && git commit -m "Post: my post name" && git push   # auto-deploys
-```
+## Standards
 
-The first post is already outlined for you (as a draft, so it will NOT appear
-on the live site until you finish it):
-`content/posts/what-is-indirect-prompt-injection.md`
+- **Reproducible.** A post that makes a claim ships the code behind it. Each post lives in its own folder under [`content/posts/`](content/posts/), with its scripts next to the text, so you can run exactly what I ran.
+- **Sourced.** Every number links to where it came from, or to my own experiment.
+- **Honest about failure.** Expectations are stated before results, and negative results stay in.
+- **One idea per post.** If a post needs "and also", that is the next post.
 
-## Local preview: install Hugo on your machine
+## Research
 
-You need the **extended** edition, v0.146 or newer (the workflow pins 0.165.0).
+- Yusuf Khalid Shire and Sang-Chul Kim. **PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift.** *IEEE Access*, vol. 14, 2026. [DOI](https://doi.org/10.1109/ACCESS.2026.3728186) · [arXiv](https://arxiv.org/abs/2609.15017) · [Code](https://github.com/ShirePyDev/Prompt-Injection-Detection-System)
 
-- **macOS:** `brew install hugo`
-- **Windows:** `winget install Hugo.Hugo.Extended`
-- **Ubuntu/Debian:** download the `hugo_extended_*_linux-amd64.deb` from
-  https://github.com/gohugoio/hugo/releases and `sudo dpkg -i` it
-  (the version in `apt` is usually too old for PaperMod).
+## About the author
 
-Verify with `hugo version` — the output must contain the word `extended`.
+I am a Master's student in the Department of AI Convergence at Kookmin University in Seoul, working in MCLab with Professor Sang-Chul Kim. More on the [About](https://shirepydev.github.io/about/) page.
 
-## Features already wired up
+## Corrections and feedback
 
-- Home page profile card (name, tagline, buttons) — edit in `hugo.yaml` under `profileMode`
-- Post list with reading time, tags, table of contents, copy-code buttons
-- Search page at `/search/` (client-side, Fuse.js — built into PaperMod)
-- Archive at `/archives/`, tags at `/tags/`, RSS at `/index.xml`
-- Light/dark mode following the reader's system, with a manual toggle
-- Syntax highlighting via Hugo's Chroma (PaperMod's own light/dark styles)
-- LaTeX per post: put `math: true` in a post's front matter (loads KaTeX from CDN only on those pages)
-- Writing checklist baked into every new post (see `archetypes/posts.md`)
+If you find an error, or run a demo and get a different result, please [open an issue](https://github.com/ShirePyDev/shirepydev.github.io/issues) or email [khalidshire@kookmin.ac.kr](mailto:khalidshire@kookmin.ac.kr). Corrections are welcome.
 
-## Maintenance notes (honest ones)
+## License
 
-- **Theme updates are manual** because the theme is vendored. Every few months:
-  download a fresh copy of https://github.com/adityatelange/hugo-PaperMod,
-  replace the `themes/PaperMod` folder, run `hugo server` to check nothing
-  broke. Vendoring was a deliberate trade: beginners lose hours to submodule
-  problems; you lose nothing except auto-updates.
-- **Custom domain later:** buy a domain, add a `CNAME` file containing it to
-  the repo root, point DNS per GitHub's docs, and update `baseURL` in
-  `hugo.yaml`. Do this only after ~10 posts exist. Content first.
-- **Comments:** intentionally off. If you want them later, giscus (GitHub
-  Discussions-based) is the standard choice for this stack.
+- **Writing and figures** (posts, pages and images) are licensed under [CC BY 4.0](LICENSE). You may reuse and adapt them, including commercially, as long as you credit the author and link to the source.
+- **Code** (the scripts that accompany posts, code samples inside posts, and the site's own layouts and styles) is licensed under [MIT](LICENSE-CODE).
+- **Not covered:** photographs of the author in [`static/images/`](static/images/), and the [PaperMod](themes/PaperMod/) theme, which keeps its own [MIT license](themes/PaperMod/LICENSE).
+
+---
+
+<sub>Built with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to GitHub Pages with GitHub Actions.</sub>

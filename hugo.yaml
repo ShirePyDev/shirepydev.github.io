@@ -1,11 +1,8 @@
-# ============================================================
-# Site configuration. Lines marked EDIT need your real values.
-# ============================================================
-
 baseURL: "https://shirepydev.github.io/"
 locale: "en-us"
 title: "Yusuf Khalid Shire"
 theme: "PaperMod"
+copyright: "© 2026 Yusuf Khalid Shire · Text [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Code [MIT](https://github.com/ShirePyDev/shirepydev.github.io/blob/main/LICENSE-CODE)"
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -40,12 +37,12 @@ params:
   description: "Research notes by Yusuf Khalid Shire on AI security, AI safety, and AI policy: prompt injection, how defenses fail and how to evaluate them honestly, and what that means for governance. Written while learning it."
   author: "Yusuf Khalid Shire"
   keywords: [AI security, AI safety, AI policy, prompt injection, LLM security, benchmarks, AI governance]
-  images: ["og-default.png"]   # fallback social-preview image (static/og-default.png) for posts without a cover
+  images: ["og-default.png"]   
 
   label:
-    text: "Yusuf Khalid Shire"   # header text, top-left
+    text: "Yusuf Khalid Shire"   
 
-  defaultTheme: auto        # light/dark follows the reader's system
+  defaultTheme: auto        
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -54,7 +51,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
-  ShowFullTextinRSS: true   # feed readers get the whole post
+  ShowFullTextinRSS: true   
   ShowToc: true
   TocOpen: false
   ShowWordCount: false
@@ -62,11 +59,11 @@ params:
   disableSpecial1stPost: true
 
   cover:
-    linkFullImages: true    # click a cover to open it full size
+    linkFullImages: true   
     responsiveImages: true
-    hiddenInList: false     # covers show as thumbnails on the post list
+    hiddenInList: false     
 
-  # Home page: short intro at the top, posts listed underneath (PaperMod "home-info" mode).
+
   homeInfoParams:
     Title: "Yusuf Khalid Shire"
     Content: >
@@ -81,37 +78,23 @@ params:
       than the one I found. Explanations of attacks and defenses, notes on papers and
       policy, and build logs from my own projects, including the mistakes.
 
-  # Previous home page layout, kept in case you want it back: set enabled: true
-  # and comment out homeInfoParams above.
-  # profileMode:
-  #   enabled: false
-  #   title: "Yusuf"
-  #   subtitle: "AI security researcher in training."
-  #   buttons:
-  #     - name: Posts
-  #       url: /posts/
-  #     - name: About
-  #       url: /about/
-
   socialIcons:
     - name: github
       url: "https://github.com/ShirePyDev"
     - name: linkedin
       url: "https://www.linkedin.com/in/yusuf-khalid-336207235/"     
     - name: email
-      url: "mailto:khalidshire@kookmin.ac.kr"              # EDIT if you want a different public address
-    # - name: googlescholar        # add once a profile exists
-    #   url: ""
+      url: "mailto:khalidshire@kookmin.ac.kr"              
+
     - name: rss
       url: "/index.xml"
 
-  fuseOpts:                 # search behavior (defaults are fine)
+  fuseOpts:               
     isCaseSensitive: false
     shouldSort: true
     minMatchCharLength: 2
     keys: [title, summary, content]
 
-# Menu is deliberately small. Add Tags after ~8 posts, Archive after ~15.
 menu:
   main:
     - identifier: posts

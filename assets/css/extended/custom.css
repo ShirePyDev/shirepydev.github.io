@@ -7,6 +7,9 @@
 .post-content a:not(.anchor) { color: var(--accent); text-decoration-thickness: 1px; }
 .post-content a:not(.anchor):hover { text-decoration-thickness: 2px; }
 
+/* Author photo on the About page: ![...](/images/yusuf.jpg#avatar) */
+.md-content img[src$="#avatar"] { display: block; width: 200px; height: 200px; margin: 0 auto 2rem; border-radius: 50%; object-fit: cover; }
+
 /* Body text: a little more air for long technical posts */
 .post-content { line-height: 1.75; }
 
