@@ -23,7 +23,7 @@ And when I started, most AI security material was either a research paper (dense
 
 ## What you will find here
 
-Explanations of attacks and defenses, notes on papers worth reading, write-ups of my own research, and build logs from my projects, including the parts that went wrong. Research posts end with the experiment I would run next, because that is usually the most useful thing in them.
+So far: explanations of attacks and defenses, and write-ups of my own research, with the code behind them. Research posts end with the experiment I would run next, because that is usually the most useful thing in them.
 
 ## Publications
 

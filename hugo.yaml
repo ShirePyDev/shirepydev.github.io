@@ -70,13 +70,13 @@ params:
       Master's student at Kookmin University in Seoul, working on AI security, AI safety,
       and the policy questions between them: prompt injection, how defenses fail, how to
       evaluate them honestly, and what those results should mean for the rules we set for
-      deployed systems. My first paper, [a benchmark for prompt-injection detectors](/posts/pids-bench/), is in
+      deployed systems. My first paper, [a benchmark for prompt-injection detectors](https://arxiv.org/pdf/2609.15017), is in
       IEEE Access (2026).
 
 
       I write here to check whether I understand things, and to leave a clearer path
-      than the one I found. Explanations of attacks and defenses, notes on papers and
-      policy, and build logs from my own projects, including the mistakes.
+      than the one I found. So far that means explanations of attacks and defenses and
+      write-ups of my own research, with the code to rerun them.
 
   socialIcons:
     - name: github
