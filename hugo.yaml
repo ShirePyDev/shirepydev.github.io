@@ -37,7 +37,11 @@ params:
   description: "Research notes by Yusuf Khalid Shire on AI security, AI safety, and AI policy: prompt injection, how defenses fail and how to evaluate them honestly, and what that means for governance. Written while learning it."
   author: "Yusuf Khalid Shire"
   keywords: [AI security, AI safety, AI policy, prompt injection, LLM security, benchmarks, AI governance]
-  images: ["<meta name="google-site-verification" content="HM7oAEmRGNW9r5TQ6-WVZNseXy3MMnPOFKtMzoLcl5s" />"]   
+  images: ["og-default.png"]
+
+  analytics:
+    google:
+      SiteVerificationTag: "HM7oAEmRGNW9r5TQ6-WVZNseXy3MMnPOFKtMzoLcl5s"
 
   label:
     text: "Yusuf Khalid Shire"   
