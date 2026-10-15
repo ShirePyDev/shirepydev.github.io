@@ -215,7 +215,7 @@ The full code is in this post's folder. [harness.py](harness.py) holds the agent
 
 ## Next
 
-The next post is about detection itself, and explains my paper, [PIDS-Bench](https://arxiv.org/abs/2609.15017), published in *IEEE Access*. Trained prompt-injection detectors do far better than a keyword filter, but they have costs of their own. PIDS-Bench is a benchmark that measures what those detectors do to legitimate security-related text, like this post, not only whether they catch attacks, and how they hold up under obfuscation and distribution shift.
+The [next post](https://shirepydev.github.io/posts/pids-bench/) is about detection itself, and explains my paper, [PIDS-Bench](https://arxiv.org/abs/2609.15017), published in *IEEE Access*. Trained prompt-injection detectors do far better than a keyword filter, but they have costs of their own. PIDS-Bench is a benchmark that measures what those detectors do to legitimate security-related text, like this post, not only whether they catch attacks, and how they hold up under obfuscation and distribution shift.
 
 ## Further reading
 

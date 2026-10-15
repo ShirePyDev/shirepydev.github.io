@@ -1,0 +1,21 @@
+{{- /* Previous/next links at the foot of each post, in reading order.
+       PaperMod labels the newer post "Prev" and the older one "Next";
+       the series is read oldest first, so this swaps them.
+       On a Pages collection, .Prev is the older post and .Next the newer. */ -}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+<nav class="paginav">
+  {{- with $pages.Prev . }}
+  <a class="prev" href="{{ .Permalink }}">
+    <span class="title">« Previous post</span>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+  {{- with $pages.Next . }}
+  <a class="next" href="{{ .Permalink }}">
+    <span class="title">Next post »</span>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}

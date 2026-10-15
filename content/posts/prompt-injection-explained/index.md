@@ -147,7 +147,7 @@ Test your own application with your own content. Nobody else's numbers are your 
 
 ## Next
 
-The next post is about indirect injection: why the version where the attacker never touches your application is the one that matters, and why it is so hard to catch.
+The [next post](https://shirepydev.github.io/posts/ipi-harness/) is about indirect injection: why the version where the attacker never touches your application is the one that matters, and why it is so hard to catch.
 
 ## Further reading
 
