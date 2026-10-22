@@ -74,7 +74,7 @@ params:
       Master's student at Kookmin University in Seoul, working on AI security, AI safety,
       and the policy questions between them: prompt injection, how defenses fail, how to
       evaluate them honestly, and what those results should mean for the rules we set for
-      deployed systems. My first paper, [a benchmark for prompt-injection detectors](https://arxiv.org/pdf/2609.15017), is in
+      deployed systems. My first paper, [a benchmark for prompt-injection detectors](https://doi.org/10.1109/ACCESS.2026.3728186), is in
       IEEE Access (2026).
 
 
@@ -86,9 +86,11 @@ params:
     - name: github
       url: "https://github.com/ShirePyDev"
     - name: linkedin
-      url: "https://www.linkedin.com/in/yusuf-khalid-336207235/"     
+      url: "https://www.linkedin.com/in/yusufkshire/"
+    - name: x
+      url: "https://x.com/YusufKShire"
     - name: email
-      url: "mailto:khalidshire@kookmin.ac.kr"              
+      url: "mailto:khalidshire@kookmin.ac.kr"
 
     - name: rss
       url: "/index.xml"
