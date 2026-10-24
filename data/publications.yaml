@@ -1,0 +1,13 @@
+# Listed on the homepage under "Publications", newest first.
+- title: "PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift"
+  authors: "Yusuf Khalid Shire and Sang-Chul Kim"
+  venue: "IEEE Access"
+  volume: "vol. 14"
+  year: 2026
+  links:
+    - name: "DOI"
+      url: "https://doi.org/10.1109/ACCESS.2026.3728186"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2609.15017"
+    - name: "Benchmark and code"
+      url: "https://github.com/ShirePyDev/Prompt-Injection-Detection-System"

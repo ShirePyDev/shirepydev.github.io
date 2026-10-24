@@ -1,0 +1,49 @@
+{{- /* Homepage: short intro, then compact lists. Replaces PaperMod's card list on the home page only. */ -}}
+{{- define "main" }}
+
+{{- partial "home_info.html" . }}
+
+{{- $limit := 8 }}
+
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- with $posts }}
+<section class="home-section" aria-labelledby="home-writing">
+  <h2 id="home-writing" class="home-section-title">Writing</h2>
+  {{- partial "entry_list.html" (first $limit .) }}
+  {{- if gt (len .) $limit }}
+  <p class="home-more"><a href="{{ "posts/" | relURL }}">All posts</a></p>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- $notes := where site.RegularPages "Section" "papers" }}
+{{- with $notes }}
+<section class="home-section" aria-labelledby="home-papers">
+  <h2 id="home-papers" class="home-section-title">Paper notes</h2>
+  {{- partial "entry_list.html" (first $limit .) }}
+  {{- if gt (len .) $limit }}
+  <p class="home-more"><a href="{{ "papers/" | relURL }}">All paper notes</a></p>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with site.Data.publications }}
+<section class="home-section" aria-labelledby="home-publications">
+  <h2 id="home-publications" class="home-section-title">Publications</h2>
+  <ul class="pub-list">
+    {{- range . }}
+    <li>
+      <span class="pub-title">{{ .title }}</span>
+      <span class="pub-meta">{{ .authors }}. <em>{{ .venue }}</em>{{ with .volume }}, {{ . }}{{ end }}, {{ .year }}.</span>
+      {{- with .links }}
+      <span class="pub-links">
+        {{- range $i, $l := . }}{{ if $i }} · {{ end }}<a href="{{ $l.url }}">{{ $l.name }}</a>{{ end -}}
+      </span>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- end }}

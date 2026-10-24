@@ -1,0 +1,31 @@
+{{- /* Compact list of pages: date and reading time, title, one-line summary.
+       Set params.listThumbnails: true in hugo.yaml to show a small cover image on each row. */ -}}
+{{- $thumbs := site.Params.listThumbnails }}
+<ul class="entry-list{{ if $thumbs }} with-thumbs{{ end }}">
+  {{- range . }}
+  {{- $p := . }}
+  <li class="entry-row">
+    {{- if $thumbs }}
+    {{- with $p.Params.cover.image }}
+    {{- with $p.Resources.GetMatch . }}
+    {{- $t := .Fill "480x252 Center webp q85" }}
+    <img class="entry-thumb" src="{{ $t.RelPermalink }}" width="240" height="126" alt="" loading="lazy">
+    {{- end }}
+    {{- end }}
+    {{- end }}
+    <div class="entry-row-text">
+      <h3 class="entry-row-title">
+        <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+        {{- if $p.Draft }} <span class="entry-row-draft">draft</span>{{ end }}
+      </h3>
+      {{- with $p.Summary }}
+      <p class="entry-row-summary">{{ . | plainify | htmlUnescape }}</p>
+      {{- end }}
+      <p class="entry-row-meta">
+        <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date | time.Format ":date_medium" }}</time>
+        {{- if $p.Param "ShowReadingTime" }} · {{ $p.ReadingTime }} min{{ end }}
+      </p>
+    </div>
+  </li>
+  {{- end }}
+</ul>

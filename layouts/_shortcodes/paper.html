@@ -1,0 +1,12 @@
+{{- /* Citation box at the top of a paper note. Reads the `paper:` block in the note's front matter.
+       Usage, first line of the note:  {{< paper >}} */ -}}
+{{- with .Page.Params.paper }}
+<div class="paper-card">
+  <p class="paper-card-label">The paper</p>
+  <p class="paper-card-title">{{ with .url }}<a href="{{ . }}">{{ end }}{{ .title }}{{ with .url }}</a>{{ end }}</p>
+  <p class="paper-card-meta">{{ .authors }}{{ with .venue }} · {{ . }}{{ end }}{{ with .year }} {{ . }}{{ end }}</p>
+  {{- with .code }}
+  <p class="paper-card-meta"><a href="{{ . }}">Code and data</a></p>
+  {{- end }}
+</div>
+{{- end }}

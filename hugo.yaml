@@ -52,13 +52,15 @@ params:
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
   ShowFullTextinRSS: true   
   ShowToc: true
   TocOpen: false
   ShowWordCount: false
+  hideAuthor: true          # one-author blog: no name on every post and list entry
+  listThumbnails: false     # true = small cover image next to each entry on the homepage and lists
   hideSummary: false
   disableSpecial1stPost: true
 
@@ -69,18 +71,11 @@ params:
 
 
   homeInfoParams:
-    Title: "Yusuf Khalid Shire"
+    Title: "How defenses for language models fail, and how to measure it"
     Content: >
-      Master's student at Kookmin University in Seoul, working on AI security, AI safety,
-      and the policy questions between them: prompt injection, how defenses fail, how to
-      evaluate them honestly, and what those results should mean for the rules we set for
-      deployed systems. My first paper, [a benchmark for prompt-injection detectors](https://doi.org/10.1109/ACCESS.2026.3728186), is in
-      IEEE Access (2026).
-
-
-      I write here to check whether I understand things, and to leave a clearer path
-      than the one I found. So far that means explanations of attacks and defenses and
-      write-ups of my own research, with the code to rerun them.
+      I'm a Master's student at Kookmin University in Seoul, working on AI security,
+      AI safety, and the policy questions between them. I write explanations of attacks
+      and defenses and write-ups of my own research, with the code to rerun them.
 
   socialIcons:
     - name: github

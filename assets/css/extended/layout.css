@@ -1,0 +1,58 @@
+/* Layout for the homepage, list pages and paper notes. custom.css stays for post typography. */
+
+/* Lists sit on the same background as posts, not on gray behind cards. */
+.list { background: var(--theme); }
+
+/* Homepage intro: no forced height, a smaller title than PaperMod's default. */
+.home-info { min-height: 0; margin: var(--gap) 0 calc(var(--gap) * 1.5); }
+.home-info .entry-header h1 { font-size: 30px; line-height: 1.25; }
+.home-info .entry-content { color: var(--secondary); }
+
+.home-section { margin-bottom: calc(var(--gap) * 2); }
+.home-section-title {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--secondary); padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.home-more { margin-top: 12px; font-size: 15px; }
+.home-more a { color: var(--accent); }
+
+/* Compact entry list */
+.entry-list { list-style: none; padding: 0; margin: 0; }
+.entry-row { position: relative; display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.entry-row-text { min-width: 0; }
+.entry-row-title { font-size: 19px; line-height: 1.35; font-weight: 600; margin: 0 0 6px; }
+.entry-row-title a::after { content: ""; position: absolute; inset: 0; }   /* whole row is the link */
+.entry-row:hover .entry-row-title a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.entry-row-summary { color: var(--secondary); font-size: 15px; line-height: 1.55; margin: 0 0 6px; }
+.entry-row-meta { color: var(--secondary); font-size: 13px; margin: 0; }
+.entry-row-draft { font-size: 12px; font-weight: normal; color: var(--secondary); border: 1px solid var(--tertiary); border-radius: 4px; padding: 0 5px; }
+.entry-thumb { flex: none; width: 240px; height: 126px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); }
+@media (max-width: 600px) {
+  .with-thumbs .entry-row { flex-direction: column; gap: 12px; }
+  .entry-thumb { width: 100%; height: auto; aspect-ratio: 480 / 252; }
+}
+
+/* Publications on the homepage */
+.pub-list { list-style: none; padding: 0; margin: 0; }
+.pub-list li { padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 15px; line-height: 1.55; }
+.pub-title { display: block; font-weight: 600; color: var(--primary); }
+.pub-meta { display: block; color: var(--secondary); }
+.pub-links a { color: var(--accent); }
+
+/* Paper notes: citation box from the {{< paper >}} shortcode */
+.paper-card { border: 1px solid var(--border); border-inline-start: 3px solid var(--accent); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 28px; background: var(--code-bg); }
+.post-content .paper-card p { margin: 0; }
+.paper-card-label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--secondary); }
+.post-content .paper-card-title { font-weight: 600; margin: 4px 0 2px; line-height: 1.45; }
+.paper-card-meta { font-size: 14px; color: var(--secondary); }
+
+/* Long post titles on phones */
+@media (max-width: 600px) {
+  .post-title, .page-header h1 { font-size: 30px; line-height: 1.2; }
+  .home-info .entry-header h1 { font-size: 26px; }
+}
+
+/* Dark mode: take the glare off light figures and covers. The About photo is left alone. */
+[data-theme="dark"] .entry-cover img,
+[data-theme="dark"] .entry-thumb,
+[data-theme="dark"] .post-content figure img { filter: brightness(0.88); }
