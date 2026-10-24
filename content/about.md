@@ -9,26 +9,22 @@ ShowBreadCrumbs: false
 
 ![Yusuf Khalid Shire](/images/yusuf.jpg#avatar)
 
-I'm Yusuf Khalid Shire, a Master's student in the Department of AI Convergence at Kookmin University in Seoul, where I work in MCLab with Professor Sang-Chul Kim. I started there in September 2025.
+I'm Yusuf Khalid Shire, a Master's student in the Department of AI Convergence at Kookmin University in Seoul. I work in MCLab with Professor Sang-Chul Kim.
 
-My work sits where AI security, AI safety, and AI policy meet. The question I keep coming back to is how the defenses we put in front of language models fail, and how to measure that failure honestly instead of reporting one flattering number. My first paper is a benchmark for prompt-injection detectors that measures what they do to legitimate security-related text, not only whether they catch attacks. The part I am increasingly drawn to is what such results should mean beyond the lab: how evaluation evidence like this should shape safety requirements, deployment standards, and the policy written for AI systems. Future papers and projects here will follow that line.
+I study how the defenses we put in front of language models fail, and how to measure that failure honestly instead of reporting one flattering number. My paper, [PIDS-Bench]({{< ref "/posts/pids-bench" >}}), does this for prompt-injection detectors: it measures what they do to legitimate security-related text, not only whether they catch attacks. I am also interested in what results like these should mean outside the lab, for safety requirements, deployment standards and AI policy.
 
-## Why this blog exists
+## What I write here
 
-Two reasons.
+Most posts are either explanations of attacks and defenses or write-ups of my own research. Both come with the code to rerun them. Research posts end with the experiment I would run next, because that is usually the most useful part.
 
-Writing is how I check whether I understand something. If I cannot explain an attack in plain language, with a concrete example and a number I can source, I do not understand it yet.
-
-And when I started, most AI security material was either a research paper (dense, assumes you already know the field) or a social-media thread (loud, often wrong). Short, sourced, reproducible explanations were hard to find. That is the gap I write into.
-
-## What you will find here
-
-So far: explanations of attacks and defenses, and write-ups of my own research, with the code behind them. Research posts end with the experiment I would run next, because that is usually the most useful thing in them.
+I write to check my own understanding. If I cannot explain an attack in plain language, with a concrete example and a number I can source, I do not understand it yet.
 
 ## Publications
 
 - Yusuf Khalid Shire and Sang-Chul Kim. **PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift.** *IEEE Access*, vol. 14, 2026. [DOI](https://doi.org/10.1109/ACCESS.2026.3728186) · [arXiv](https://arxiv.org/abs/2609.15017) · [benchmark and code](https://github.com/ShirePyDev/Prompt-Injection-Detection-System)
 
-## Elsewhere
+## Contact
+
+If you find an error in a post, or rerun my code and get a different number, I want to know: [khalidshire@kookmin.ac.kr](mailto:khalidshire@kookmin.ac.kr).
 
 [GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/yusufkshire/) · [X](https://x.com/YusufKShire)
