@@ -10,7 +10,7 @@ cover:
   relative: true
 ---
 
-In the [last post](https://shirepydev.github.io/posts/prompt-injection-explained/) a document told a summarizer to reply with the word PWNED, and two of four models did it. The damage there was a wrong answer on the screen. Nobody's data moved. That is the least interesting thing an injected instruction can do.
+In the [last post]({{< ref "/posts/prompt-injection-explained" >}}) a document told a summarizer to reply with the word PWNED, and two of four models did it. The damage there was a wrong answer on the screen. Nobody's data moved. That is the least interesting thing an injected instruction can do.
 
 The version that matters is the one where the model can act. Give it a tool that sends email, reads a calendar, runs a query, or opens a URL, and an instruction buried in the content it reads can stop being a wrong answer and become a wrong action. NIST's glossary puts the definition in one line: indirect prompt injection is prompt injection "executed through resource control rather than through user-provided input" ([NIST AI 100-2e2025](https://csrc.nist.gov/glossary/term/indirect_prompt_injection)). The attacker never talks to the application. They leave text where the application will read it, and wait.
 
@@ -215,7 +215,7 @@ The full code is in this post's folder. [harness.py](harness.py) holds the agent
 
 ## Next
 
-The [next post](https://shirepydev.github.io/posts/pids-bench/) is about detection itself, and explains my paper, [PIDS-Bench](https://arxiv.org/abs/2609.15017), published in *IEEE Access*. Trained prompt-injection detectors do far better than a keyword filter, but they have costs of their own. PIDS-Bench is a benchmark that measures what those detectors do to legitimate security-related text, like this post, not only whether they catch attacks, and how they hold up under obfuscation and distribution shift.
+The [next post]({{< ref "/posts/pids-bench" >}}) is about detection itself, and explains my paper, [PIDS-Bench](https://arxiv.org/abs/2609.15017), published in *IEEE Access*. Trained prompt-injection detectors do far better than a keyword filter, but they have costs of their own. PIDS-Bench is a benchmark that measures what those detectors do to legitimate security-related text, like this post, not only whether they catch attacks, and how they hold up under obfuscation and distribution shift.
 
 ## Further reading
 

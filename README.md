@@ -1,6 +1,6 @@
 # Yusuf Khalid Shire · AI Security, Safety & Policy
 
-**[shirepydev.github.io](https://shirepydev.github.io/)**
+**[yusufkshire.com](https://yusufkshire.com/)**
 
 Research notes on how language-model systems are attacked, how their defenses fail, how to measure that failure honestly, and what those measurements should mean for the rules we write for deployed AI.
 
@@ -36,7 +36,7 @@ The recurring themes are prompt injection (direct and indirect), the security of
 
 ## About the author
 
-I am a Master's student in the Department of AI Convergence at Kookmin University in Seoul, working in MCLab with Professor Sang-Chul Kim. More on the [About](https://shirepydev.github.io/about/) page.
+I am a Master's student in the Department of AI Convergence at Kookmin University in Seoul, working in MCLab with Professor Sang-Chul Kim. More on the [About](https://yusufkshire.com/about/) page.
 
 ## Corrections and feedback
 

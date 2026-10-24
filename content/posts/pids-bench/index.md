@@ -10,7 +10,7 @@ cover:
   relative: true
 ---
 
-In the [first post](https://shirepydev.github.io/posts/prompt-injection-explained/) of this series, a five-pattern keyword filter blocked a harmless question about prompt injection, because the question contained one of the phrases it was looking for. I wrote then that trained classifiers do much better than a keyword list and have costs of their own. This post is about those costs.
+In the [first post]({{< ref "/posts/prompt-injection-explained" >}}) of this series, a five-pattern keyword filter blocked a harmless question about prompt injection, because the question contained one of the phrases it was looking for. I wrote then that trained classifiers do much better than a keyword list and have costs of their own. This post is about those costs.
 
 We trained a prompt-injection detector that scores F1 0.988 on its held-out test set. On the ordinary harmless prompts in that test set, it blocks about one in eighty. On harmless prompts from public datasets that happen to talk about security, system prompts or instructions, it blocks about one in three. Neither moving the threshold nor recalibrating the scores fixed that, and training on extra harmless examples fixed it only for the kind of prompt we had written ourselves.
 
@@ -126,7 +126,7 @@ These models were trained by other people, on other data, with their own idea of
 
 The last post said this one would also cover obfuscation and distribution shift.
 
-Our three detectors caught more than 96% of the 405 disguised attacks. That sounds better than it is. The released files label seven disguises (Base64, ROT13, two kinds of look-alike characters, zero-width characters, extra spacing and split markdown), and all seven also appear in the training data, so the test measures disguises the detectors have seen, applied to attacks they haven't. An attacker who invents a new disguise is a different test, and the adaptive attacks in the [last post](https://shirepydev.github.io/posts/ipi-harness/) show how differently that test can come out.
+Our three detectors caught more than 96% of the 405 disguised attacks. That sounds better than it is. The released files label seven disguises (Base64, ROT13, two kinds of look-alike characters, zero-width characters, extra spacing and split markdown), and all seven also appear in the training data, so the test measures disguises the detectors have seen, applied to attacks they haven't. An attacker who invents a new disguise is a different test, and the adaptive attacks in the [last post]({{< ref "/posts/ipi-harness" >}}) show how differently that test can come out.
 
 Under topic shift, where prompts move into specialist domains such as code and law, DistilBERT failed in both directions (Table 5). On code, its recall on attacks fell to 43.5%, so attacks got through. On legal prompts, it still caught 99.2% of attacks but blocked 25.4% of the harmless ones, so users got blocked. That legal figure varied widely across the five runs (±19.8 points), so read it as a sign of over-blocking, not a precise rate. DistilBERT's single topic-shift F1, 0.889, hides both failures.
 

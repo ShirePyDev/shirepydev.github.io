@@ -31,4 +31,4 @@ So far: explanations of attacks and defenses, and write-ups of my own research, 
 
 ## Elsewhere
 
-[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/yusuf-khalid-336207235/)
+[GitHub](https://github.com/ShirePyDev) · [LinkedIn](https://www.linkedin.com/in/yusufkshire/) · [X](https://x.com/YusufKShire)
