@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!--
+    Cover for "OWASP's AI security guide, applied to an email agent".
+    Layer names and the email-summarizer examples are from the OWASP AI Exchange,
+    PDF generated 9/10/2026, pp. 204-206. The verdicts are the post's reading
+    for the email agent in /posts/ipi-harness/, not a measurement.
+    Render: headless Chrome, window 1200x630, device scale factor 2.
+  -->
+  <defs>
+    <style>
+      .tag  { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.6px; fill: #7A7266; }
+      .num  { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 700; font-size: 15px; fill: #FFFFFF; }
+      .name { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 600; font-size: 18px; fill: #1E2230; }
+      .what { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 500; font-size: 16px; fill: #767A84; }
+      .pill { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 600; font-size: 15px; }
+      .cap1 { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 600; font-size: 31px; fill: #1E2230; }
+      .cap2 { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 600; font-size: 31px; fill: #2E6B4F; }
+      .note { font-family: 'Avenir Next', 'Helvetica Neue', Inter, Arial, sans-serif; font-weight: 500; font-size: 13.5px; fill: #7A7266; }
+    </style>
+  </defs>
+
+  <!-- paper -->
+  <rect width="1200" height="630" fill="#F5F1E8"/>
+
+  <text class="tag" x="60" y="52">OWASP AI EXCHANGE: SEVEN LAYERS OF PROMPT-INJECTION PROTECTION, ON THE EMAIL AGENT</text>
+
+  <!-- group labels -->
+  <line x1="214" y1="74" x2="214" y2="166" stroke="#B9B0A2" stroke-width="2"/>
+  <text class="tag" x="200" y="114" text-anchor="end">STOP THE</text>
+  <text class="tag" x="200" y="132" text-anchor="end">INJECTION</text>
+  <line x1="214" y1="178" x2="214" y2="426" stroke="#B9B0A2" stroke-width="2"/>
+  <text class="tag" x="200" y="294" text-anchor="end">LIMIT THE</text>
+  <text class="tag" x="200" y="312" text-anchor="end">DAMAGE</text>
+
+  <!-- rows: y = 74 + 52*(n-1), height 40 -->
+  <g>
+    <rect x="232" y="74" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#E4DED3"/>
+    <circle cx="256" cy="94" r="13" fill="#8A8478"/>
+    <text class="num" x="256" y="99" text-anchor="middle">1</text>
+    <text class="name" x="282" y="100">Model alignment</text>
+    <text class="what" x="560" y="100">Training and the system prompt's rules</text>
+    <rect x="952" y="81" width="176" height="26" rx="13" fill="#ECE7DC"/>
+    <text class="pill" x="1040" y="99" text-anchor="middle" fill="#6B6458">might catch it</text>
+  </g>
+  <g>
+    <rect x="232" y="126" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#E4DED3"/>
+    <circle cx="256" cy="146" r="13" fill="#8A8478"/>
+    <text class="num" x="256" y="151" text-anchor="middle">2</text>
+    <text class="name" x="282" y="152">Input handling</text>
+    <text class="what" x="560" y="152">A detector screens the inbox first</text>
+    <rect x="952" y="133" width="176" height="26" rx="13" fill="#ECE7DC"/>
+    <text class="pill" x="1040" y="151" text-anchor="middle" fill="#6B6458">might catch it</text>
+  </g>
+  <g>
+    <rect x="232" y="178" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#E4DED3"/>
+    <circle cx="256" cy="198" r="13" fill="#8A8478"/>
+    <text class="num" x="256" y="203" text-anchor="middle">3</text>
+    <text class="name" x="282" y="204">Human oversight</text>
+    <text class="what" x="560" y="204">The user approves every send</text>
+    <rect x="952" y="185" width="176" height="26" rx="13" fill="#ECE7DC"/>
+    <text class="pill" x="1040" y="203" text-anchor="middle" fill="#6B6458">might catch it</text>
+  </g>
+  <g>
+    <rect x="232" y="230" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#E4DED3"/>
+    <circle cx="256" cy="250" r="13" fill="#8A8478"/>
+    <text class="num" x="256" y="255" text-anchor="middle">4</text>
+    <text class="name" x="282" y="256">Automated oversight</text>
+    <text class="what" x="560" y="256">An alert on unusual sends</text>
+    <rect x="952" y="237" width="176" height="26" rx="13" fill="#ECE7DC"/>
+    <text class="pill" x="1040" y="255" text-anchor="middle" fill="#6B6458">might catch it</text>
+  </g>
+  <g>
+    <rect x="232" y="282" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#E4DED3"/>
+    <circle cx="256" cy="302" r="13" fill="#C0401A"/>
+    <text class="num" x="256" y="307" text-anchor="middle">5</text>
+    <text class="name" x="282" y="308">User-based least privilege</text>
+    <text class="what" x="560" y="308">The agent gets the user's rights</text>
+    <rect x="952" y="289" width="176" height="26" rx="13" fill="#FBE4DA"/>
+    <text class="pill" x="1040" y="307" text-anchor="middle" fill="#A3370F">does not stop it</text>
+  </g>
+  <g>
+    <rect x="232" y="334" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#2E6B4F" stroke-width="1.5"/>
+    <circle cx="256" cy="354" r="13" fill="#2E6B4F"/>
+    <text class="num" x="256" y="359" text-anchor="middle">6</text>
+    <text class="name" x="282" y="360">Intent-based least privilege</text>
+    <text class="what" x="560" y="360">A summary needs read access only</text>
+    <rect x="952" y="341" width="176" height="26" rx="13" fill="#E1EEE6"/>
+    <text class="pill" x="1040" y="359" text-anchor="middle" fill="#2E6B4F">stops it by design</text>
+  </g>
+  <g>
+    <rect x="232" y="386" width="908" height="40" rx="7" fill="#FFFFFF" stroke="#2E6B4F" stroke-width="1.5"/>
+    <circle cx="256" cy="406" r="13" fill="#2E6B4F"/>
+    <text class="num" x="256" y="411" text-anchor="middle">7</text>
+    <text class="name" x="282" y="412">Just-in-time authorization</text>
+    <text class="what" x="560" y="412">Rights shrink once the inbox is read</text>
+    <rect x="952" y="393" width="176" height="26" rx="13" fill="#E1EEE6"/>
+    <text class="pill" x="1040" y="411" text-anchor="middle" fill="#2E6B4F">stops it by design</text>
+  </g>
+
+  <!-- caption -->
+  <text class="cap1" x="60" y="496">Four layers might catch the leak. One does not help.</text>
+  <text class="cap2" x="60" y="540">Two take away the means to send the token.</text>
+
+  <text class="note" x="60" y="592">Layers and examples: OWASP AI Exchange, pp. 204–206 (PDF of 10 September 2026). Verdicts are my reading for this agent, not a measurement.</text>
+</svg>

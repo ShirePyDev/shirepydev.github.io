@@ -1,11 +1,11 @@
-"""Check the quotes and link counts used in my note on the OWASP AI Exchange.
+"""Check the quotes and link counts used in my post on the OWASP AI Exchange.
 
 The AI Exchange is a living document, so the PDF changes. This script takes a
 PDF you downloaded (https://owaspai.org/OWASP-AI-Exchange.pdf), finds the page
-of every passage the note quotes or relies on, and says which ones are gone.
+of every passage the post quotes or relies on, and says which ones are gone.
 It also counts the link targets in the PDF by domain.
 
-The note was written against the snapshot "Generated from owaspai.org on:
+The post was written against the snapshot "Generated from owaspai.org on:
 9/10/2026" (376 pages).
 
     pip install pypdf
@@ -23,31 +23,39 @@ from pypdf import PdfReader
 PASSAGES = [
     (15, "over 170 carefully selected experts"),
     (17, "effectively and informally making the AI Exchange the standard in AI security"),
-    (27, "Evaluation characterizes behaviour; it does not prove correctness"),
     (29, "most of these controls are about familiar conventional security countermeasures, "
          "unless you are training your own model"),
     (55, "If vendors would do this secretly, it would get out because there are ways to tell"),
     (66, "you start big, but you end up with a relatively small list of risks"),
     (66, "I've seen many cases of protections in place for threats that effectively don't matter"),
+    (68, "Is the model GenAI (e.g., a Large Language Model) and not classic machine learning"),
+    (70, "Can the model trigger actions"),
+    (71, "is there an action that is able to send data"),
+    (71, "The impact is: data exfiltration"),
+    (73, "ALWAYS DO: Make sure to protect against AI resource exhaustions"),
     (75, "typically through transfer learning, federated learning, insurance or outsourcing"),
     (75, "reconstruct publicly available input data from model outputs"),
     (88, "Model inversion and membership inference are typically low to zero risks for GenAI"),
     (94, "Do generative AI models really look up existing work that may be copyrighted? In essence: no"),
-    (94, "this remains a difficult discussion"),
     (94, "Parts of this content may show remnants of existing work, but that is more of a coincidence"),
+    (94, "this remains a difficult discussion"),
     (95, "Test the resulting model for memorisation and extraction of training material"),
     (110, "Global Jurisdictional considerations (as of end of 2023)"),
-    (137, "define what is permitted, not what is wise"),
-    (199, "do not provide security guarantees against adaptive adversaries"),
+    (133, "Avoid implementing authorization in Generative AI instructions"),
     (199, "Under current architectures, prompt injection is not solvable at the model layer alone"),
+    (204, "None of these layers is sufficient by itself"),
+    (204, "Models remain easy to mislead out of the box"),
     (204, "detection of prompt injection is difficult, with substantial risk of false positives "
           "and false negatives"),
+    (205, "people quickly suffer from approval fatigue"),
     (205, "when an email summarizer attempts to send a thousand emails"),
+    (205, "An email summarizer should only be able to access the user's emails"),
+    (205, "An email summarizer should only be able to read emails"),
+    (206, "hardens privileges the moment untrusted data enters the flow"),
     (210, "the best approach for high-risk situations is to utilize LLM-based detectors"),
     (211, "Pangea, Hiddenlayer, AIShield, and Aiceberg"),
     (211, "evaluate each detector's miss-rate against adversarial inputs per supported language"),
     (221, "This can help identify unintended memorization and potential data leakage"),
-    (291, "Conflating the two produces controls that are only partially effective against each"),
     (298, "Confirm designed controls work under normal conditions before adversarial load"),
     (298, "coverage gaps are findings"),
     (299, "probabilistic LLM behaviour requires reporting rates, not single pass/fail"),
